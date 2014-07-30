@@ -1,0 +1,24 @@
+<div class="page-header">
+  <h1>CRUD <small><a href="http://es.wikipedia.org/wiki/Representational_State_Transfer">RESTful</a> en
+    <a href="https://spring.io/guides/gs/rest-service-cors/">Spring</a></small></h1>
+</div>
+<h2>Lista de Tareas</h2>
+<div ng-controller="TareasCtrl">
+  <div ng-show="tareas.length != 0">
+    <span>{{tareasRealizadas()}} de {{restantes()}}</span>
+    [ <a class="text-danger" href="" ng-click="eliminar()">eliminar</a> ]
+  </div>
+  <ul class="unstyled">
+    <li ng-repeat="tarea in tareas">
+      <div class="toggle">
+        <input type="checkbox" ng-model="tarea.hecho">
+        <span class="hecho-{{tarea.hecho}}">{{tarea.descripcion}}</span>
+      </div>
+    </li>
+  </ul>
+  <form ng-submit="agregarTarea()">
+    <input type="texto" size="30" placeholder="Agregar una nueva tarea"
+           ng-model="descripcionNuevaTarea">
+    <button class="btn btn-primary" type="submit">Agregar</button>
+  </form>
+</div>

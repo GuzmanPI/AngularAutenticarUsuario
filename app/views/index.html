@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+  	<title>Controladoeres</title>
+  	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="">
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.8/angular.min.js"></script>
+    <script src="http://code.angularjs.org/1.2.8/angular-route.min.js"></script>
+
+    <script src="listadetareas.js"></script>
+
+    <script src=""></script>
+	</head>
+  <body ng-app="miAp">
+  <nav class="navbar navbar-default" role="navigation">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Desplegar navegacion</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Menu</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="#/empleados/">Empleados</a></li>
+        <li><a href="#/tareas/">Tareas</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </nav>
+
+    <div class="container">
+      <div ng-view></div>
+    </div>
+  </body>
+</html>
